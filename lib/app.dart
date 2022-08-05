@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sabta_app/Views/Onboarding/onboarding_view.dart';
 import 'package:sabta_app/Views/Onboarding/splash_screen.dart';
 
 class MyApp extends StatelessWidget {
@@ -13,6 +14,7 @@ class MyApp extends StatelessWidget {
       initialRoute: "/",
       routes: {
         "/": (context) => const SplashScreen(),
+        "/onboarding-view": (context) => const OnboardingView(),
       },
     );
   }
