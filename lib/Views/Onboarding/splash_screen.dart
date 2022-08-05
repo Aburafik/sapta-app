@@ -17,8 +17,8 @@ class _SplashScreenState extends State<SplashScreen> {
 
     Timer(
         Duration(seconds: 5),
-        () =>
-            Navigator.pushNamedAndRemoveUntil(context, "/", (route) => false));
+        () => Navigator.pushNamedAndRemoveUntil(
+            context, "/onboarding-view", (route) => false));
   }
 
   @override
