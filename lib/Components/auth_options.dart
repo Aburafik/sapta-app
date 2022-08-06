@@ -1,13 +1,24 @@
-import 'package:feather_icons/feather_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:sabta_app/Components/Utils/color_themes.dart';
 import 'package:sabta_app/Components/custom_button.dart';
 
-class SignInOptionsComponents extends StatelessWidget {
-  const SignInOptionsComponents({
+class AuthenticationsOptionsComponents extends StatelessWidget {
+  AuthenticationsOptionsComponents({
     Key? key,
+    this.faceBookAuthButtonText,
+    this.googleAuthButtonText,
+    this.wrapperLeftText,
+    this.wrapperRightText,
+    this.rightWrapperTextOnTap,
   }) : super(key: key);
+
+  String? googleAuthButtonText;
+  String? faceBookAuthButtonText;
+
+  String? wrapperLeftText;
+  String? wrapperRightText;
+  Function()? rightWrapperTextOnTap;
 
   @override
   Widget build(BuildContext context) {
@@ -15,6 +26,7 @@ class SignInOptionsComponents extends StatelessWidget {
       children: [
         CustomButtonComponent(
           hasIcon: true,
+          iconColor: Colors.redAccent,
           icon: FontAwesomeIcons.google,
           buttonText: "Continue with Google",
         ),
@@ -27,14 +39,19 @@ class SignInOptionsComponents extends StatelessWidget {
           alignment: WrapAlignment.center,
           children: [
             Text(
-              "Not a member?",
+              wrapperLeftText!,
               style: Theme.of(context).textTheme.bodyText2,
             ),
-            Text("Create account",
+            InkWell(
+              onTap: rightWrapperTextOnTap,
+              child: Text(
+                wrapperRightText!,
                 style: Theme.of(context)
                     .textTheme
                     .bodyText2!
-                    .copyWith(color: PRIMARY_COLOR))
+                    .copyWith(color: PRIMARY_COLOR),
+              ),
+            )
           ],
         ),
       ],

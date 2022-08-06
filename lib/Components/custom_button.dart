@@ -2,12 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:sabta_app/Components/Utils/color_themes.dart';
 
 class CustomButtonComponent extends StatelessWidget {
-  CustomButtonComponent(
-      {Key? key, this.hasIcon = false, this.icon, this.buttonText})
-      : super(key: key);
+  CustomButtonComponent({
+    Key? key,
+    this.hasIcon = false,
+    this.icon,
+    this.buttonText,
+    this.iconColor,
+  }) : super(key: key);
   bool hasIcon = false;
   IconData? icon;
   String? buttonText;
+  Color? iconColor;
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +25,16 @@ class CustomButtonComponent extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            hasIcon ? Icon(icon) : Wrap(),
+            hasIcon
+                ? Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 10),
+                    child: Icon(
+                      icon,
+                      // ignore: unnecessary_null_in_if_null_operators
+                      color: iconColor??null,
+                    ),
+                  )
+                : Wrap(),
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 6),
               child: Text(
@@ -28,7 +42,7 @@ class CustomButtonComponent extends StatelessWidget {
                 style: Theme.of(context)
                     .textTheme
                     .bodyText1!
-                    .copyWith(color: hasIcon ? GREY_COLOR_20 : WHITE_COLOR),
+                    .copyWith(color: hasIcon ? GREY_COLOR_50 : WHITE_COLOR),
               ),
             ),
           ],
