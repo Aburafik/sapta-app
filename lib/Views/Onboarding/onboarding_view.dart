@@ -12,16 +12,10 @@ class OnboardingView extends StatelessWidget {
       body: OnBoardingSlider(
         indicatorAbove: true,
         finishButtonText: 'Get Started',
-        onFinish: () {
-          // Navigator.push(
-          //   context,
-          //   CupertinoPageRoute(
-          //     builder: (context) => RegisterPage(),
-          //   ),
-          // );
-        },
+        onFinish: () => Navigator.pushNamedAndRemoveUntil(
+            context, "/sign-in-view", (route) => false),
         finishButtonColor: PRIMARY_COLOR,
-        skipTextButton:const Text(
+        skipTextButton: const Text(
           'Skip',
           style: TextStyle(
             fontSize: 16,
@@ -37,14 +31,8 @@ class OnboardingView extends StatelessWidget {
             fontWeight: FontWeight.w600,
           ),
         ),
-        trailingFunction: () {
-          // Navigator.push(
-          //   context,
-          //   CupertinoPageRoute(
-          //     builder: (context) => LoginPage(),
-          //   ),
-          // );
-        },
+        trailingFunction: () => Navigator.pushNamedAndRemoveUntil(
+            context, "/sign-in-view", (route) => false),
         controllerColor: PRIMARY_COLOR,
         totalPage: 3,
         headerBackgroundColor: Colors.white,
@@ -55,9 +43,9 @@ class OnboardingView extends StatelessWidget {
             width: MediaQuery.of(context).size.width,
             child: Center(
               child: Image.asset(
-                'assets/images/logo.png',
-                height: 200,
-                width: 200,
+                'assets/images/logo2.png',
+                // height: 200,
+                // width: 200,
               ),
             ),
           ),
@@ -66,9 +54,8 @@ class OnboardingView extends StatelessWidget {
             width: MediaQuery.of(context).size.width,
             child: Center(
               child: Image.asset(
-                'assets/images/logo.png',
-                height: 200,
-                width: 200,
+                'assets/images/logo3.png',
+               
               ),
             ),
           ),
@@ -87,12 +74,12 @@ class OnboardingView extends StatelessWidget {
         speed: 1.8,
         pageBodies: [
           Container(
-            padding:const EdgeInsets.symmetric(horizontal: 20),
+            padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
-               const SizedBox(
+                const SizedBox(
                   height: 480,
                 ),
                 Text(
@@ -104,10 +91,10 @@ class OnboardingView extends StatelessWidget {
                     fontWeight: FontWeight.w600,
                   ),
                 ),
-              const  SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
-               const Text(
+                const Text(
                   'Collect and saperate your waste and get reward points while saving your planet',
                   textAlign: TextAlign.center,
                   style: TextStyle(
@@ -125,7 +112,7 @@ class OnboardingView extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
-              const  SizedBox(
+                const SizedBox(
                   height: 480,
                 ),
                 Text(
@@ -137,10 +124,10 @@ class OnboardingView extends StatelessWidget {
                     fontWeight: FontWeight.w600,
                   ),
                 ),
-              const  SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
-              const  Text(
+                const Text(
                   'You can easily make a request for your waste and we will get right to your door on time',
                   textAlign: TextAlign.center,
                   style: TextStyle(
@@ -170,10 +157,10 @@ class OnboardingView extends StatelessWidget {
                     fontWeight: FontWeight.w600,
                   ),
                 ),
-               const  SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
-             const   Text(
+                const Text(
                   'A representative will recieve your order & confirm the available quantity, then he will scan your QR code to get rewarded points loaded in your wallet .',
                   textAlign: TextAlign.center,
                   style: TextStyle(
