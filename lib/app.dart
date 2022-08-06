@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sabta_app/Views/Auths/sign_in_view.dart';
 import 'package:sabta_app/Views/Onboarding/onboarding_view.dart';
 import 'package:sabta_app/Views/Onboarding/splash_screen.dart';
 
@@ -15,6 +16,7 @@ class MyApp extends StatelessWidget {
       routes: {
         "/": (context) => const SplashScreen(),
         "/onboarding-view": (context) => const OnboardingView(),
+        "/sign-in-view": (context) => const SignInVC(),
       },
     );
   }
