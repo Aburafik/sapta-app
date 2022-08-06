@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sabta_app/Components/screen_description_text.dart';
 import 'package:sabta_app/Components/sign_in_component.dart';
-import 'package:sabta_app/Components/sign_in_options.dart';
+import 'package:sabta_app/Components/auth_options.dart';
 
 class SignInVC extends StatelessWidget {
   const SignInVC({Key? key}) : super(key: key);
@@ -26,7 +26,11 @@ class SignInVC extends StatelessWidget {
               subtitle: "Please login to continue",
             ),
             const SignInFormComponent(),
-            const SignInOptionsComponents(),
+            AuthenticationsOptionsComponents(
+              wrapperLeftText: "Not a member?",
+              wrapperRightText: "Create account",
+              rightWrapperTextOnTap: ()=>Navigator.pushNamedAndRemoveUntil(context, "/sign-up-view", (route) => false),
+            ),
           ],
         ),
       ),

@@ -24,7 +24,7 @@ class CustomTextFormField extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextFormField(
       obscureText: obscureText,
-      cursorColor: GREY_COLOR_20,
+      cursorColor: GREY_COLOR_50,
       decoration: InputDecoration(
         hintText: hintText,
         prefixIcon: hasPreffix
@@ -45,11 +45,11 @@ class CustomTextFormField extends StatelessWidget {
             : null,
         contentPadding: const EdgeInsets.symmetric(vertical: 5, horizontal: 3),
         border: OutlineInputBorder(
-          borderSide: const BorderSide(color: GREY_COLOR_50),
+          borderSide: const BorderSide(color: GREY_COLOR_20),
           borderRadius: BorderRadius.circular(10),
         ),
         focusedBorder: OutlineInputBorder(
-          borderSide: const BorderSide(color: GREY_COLOR_50),
+          borderSide: const BorderSide(color: GREY_COLOR_75),
           borderRadius: BorderRadius.circular(10),
         ),
       ),
