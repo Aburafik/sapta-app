@@ -15,7 +15,7 @@ class SignUpVC extends StatelessWidget {
         child: ListView(
           // mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             ScreenDescriptionTextComponent(
               title: "Creat account",
               subtitle: "Please enter the following data",

@@ -41,12 +41,16 @@ class _SignInFormComponentState extends State<SignInFormComponent> {
         ),
         Align(
             alignment: Alignment.centerRight,
-            child: Text(
-              "Forgot password?",
-              style: Theme.of(context)
-                  .textTheme
-                  .bodyText1!
-                  .copyWith(color: PRIMARY_COLOR),
+            child: GestureDetector(
+              onTap: () => Navigator.pushNamedAndRemoveUntil(
+                  context, "/reset-password-view", (route) => false),
+              child: Text(
+                "Forgot password?",
+                style: Theme.of(context)
+                    .textTheme
+                    .bodyText1!
+                    .copyWith(color: PRIMARY_COLOR),
+              ),
             )),
         CustomButtonComponent(
           buttonText: "Login",
