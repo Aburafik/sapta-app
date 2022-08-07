@@ -13,15 +13,19 @@ class ScreenDescriptionTextComponent extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 30),
       child: Column(
         children: [
-          Text(
-            title!,
-            style: Theme.of(context)
-                .textTheme
-                .bodyText1!
-                .copyWith(fontSize: 25, fontWeight: FontWeight.bold),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text(
+              title!,
+              style: Theme.of(context)
+                  .textTheme
+                  .bodyText1!
+                  .copyWith(fontSize: 25, fontWeight: FontWeight.bold),
+            ),
           ),
           Text(
             subtitle!,
+            textAlign: TextAlign.center,
             style: Theme.of(context)
                 .textTheme
                 .bodyText1!
