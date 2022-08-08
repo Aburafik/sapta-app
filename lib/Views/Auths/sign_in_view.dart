@@ -29,7 +29,7 @@ class SignInVC extends StatelessWidget {
             AuthenticationsOptionsComponents(
               wrapperLeftText: "Not a member?",
               wrapperRightText: "Create account",
-              rightWrapperTextOnTap: ()=>Navigator.pushNamedAndRemoveUntil(context, "/sign-up-view", (route) => false),
+              rightWrapperTextOnTap: ()=>Navigator.pushNamedAndRemoveUntil(context, "/notification-view", (route) => false),
             ),
           ],
         ),

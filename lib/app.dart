@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:sabta_app/Views/Auths/forgot_password_view.dart';
 import 'package:sabta_app/Views/Auths/sign_in_view.dart';
 import 'package:sabta_app/Views/Auths/sign_up_view.dart';
+import 'package:sabta_app/Views/Notifications/notifications.dart';
 import 'package:sabta_app/Views/Onboarding/onboarding_view.dart';
 import 'package:sabta_app/Views/Onboarding/splash_screen.dart';
 
@@ -21,6 +22,7 @@ class MyApp extends StatelessWidget {
         "/sign-in-view": (context) => const SignInVC(),
         "/sign-up-view": (context) => const SignUpVC(),
         "/reset-password-view": (context) => const ForgotPasswordVC(),
+        "/notification-view": (context) => const Notifications()
       },
     );
   }
