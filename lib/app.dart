@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
         "/sign-up-view": (context) => const SignUpVC(),
         "/reset-password-view": (context) => const ForgotPasswordVC(),
         "/notification-view": (context) => const Notifications(),
-        "/home-page": (context) => const HomePage()
+        "/home-page": (context) =>HomePage()
       },
     );
   }

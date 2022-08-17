@@ -37,6 +37,7 @@ dependencies:
   flutter_onboarding_slider: ^1.0.7
   feather_icons: ^1.2.0
   font_awesome_flutter: ^10.1.0
+  provider: ^6.0.3
 
 dev_dependencies:
   flutter_test:
