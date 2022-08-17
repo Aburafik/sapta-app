@@ -8,11 +8,13 @@ class CustomButtonComponent extends StatelessWidget {
     this.icon,
     this.buttonText,
     this.iconColor,
+    this.onPressed,
   }) : super(key: key);
   bool hasIcon = false;
   IconData? icon;
   String? buttonText;
   Color? iconColor;
+  void Function()? onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +23,7 @@ class CustomButtonComponent extends StatelessWidget {
       child: TextButton(
         style: TextButton.styleFrom(
             backgroundColor: hasIcon ? WHITE_COLOR : PRIMARY_COLOR),
-        onPressed: () {},
+        onPressed: onPressed,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -31,7 +33,7 @@ class CustomButtonComponent extends StatelessWidget {
                     child: Icon(
                       icon,
                       // ignore: unnecessary_null_in_if_null_operators
-                      color: iconColor??null,
+                      color: iconColor ?? null,
                     ),
                   )
                 : Wrap(),

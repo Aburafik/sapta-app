@@ -5,6 +5,7 @@ import 'package:sabta_app/Views/Auths/sign_up_view.dart';
 import 'package:sabta_app/Views/Notifications/notifications.dart';
 import 'package:sabta_app/Views/Onboarding/onboarding_view.dart';
 import 'package:sabta_app/Views/Onboarding/splash_screen.dart';
+import 'package:sabta_app/Views/home_page.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -22,7 +23,8 @@ class MyApp extends StatelessWidget {
         "/sign-in-view": (context) => const SignInVC(),
         "/sign-up-view": (context) => const SignUpVC(),
         "/reset-password-view": (context) => const ForgotPasswordVC(),
-        "/notification-view": (context) => const Notifications()
+        "/notification-view": (context) => const Notifications(),
+        "/home-page": (context) => const HomePage()
       },
     );
   }

@@ -54,6 +54,7 @@ class _SignInFormComponentState extends State<SignInFormComponent> {
             )),
         CustomButtonComponent(
           buttonText: "Login",
+          onPressed: ()=>Navigator.pushNamedAndRemoveUntil(context, "/home-page", (route) => false),
         ),
         Row(
           children: const [
