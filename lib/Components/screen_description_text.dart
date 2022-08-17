@@ -4,7 +4,6 @@ import 'package:sabta_app/Components/Utils/color_themes.dart';
 class ScreenDescriptionTextComponent extends StatelessWidget {
   ScreenDescriptionTextComponent({Key? key, this.subtitle, this.title})
       : super(key: key);
-
   String? title;
   String? subtitle;
   @override
