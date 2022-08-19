@@ -15,7 +15,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: ThemeData(),
+      theme: ThemeData(
+        scaffoldBackgroundColor: Color(0xffF4F4F4)
+      ),
       initialRoute: "/",
       routes: {
         "/": (context) => const SplashScreen(),
