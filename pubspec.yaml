@@ -38,6 +38,7 @@ dependencies:
   feather_icons: ^1.2.0
   font_awesome_flutter: ^10.1.0
   provider: ^6.0.3
+  carousel_slider: ^4.1.1
 
 dev_dependencies:
   flutter_test:
