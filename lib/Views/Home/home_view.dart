@@ -126,11 +126,9 @@ class TopUsersDisplayComponent extends StatelessWidget {
         ListView.builder(
           shrinkWrap: true,
           itemCount: 10,
-          physics: NeverScrollableScrollPhysics(),
-          itemBuilder: (context, index) => TopUsersCardComponent(),
+          physics: const NeverScrollableScrollPhysics(),
+          itemBuilder: (context, index) =>const TopUsersCardComponent(),
         )
-        // TopUsersCardComponent(),
-        // TopUsersCardComponent(),
       ],
     );
   }
@@ -173,12 +171,12 @@ class TopUsersCardComponent extends StatelessWidget {
                   children: [
                     Text("Adams Stephene",
                         style: Theme.of(context).textTheme.bodyText1),
-                    Text("Last active")
+                   const Text("Last active")
                   ],
                 ),
                 Wrap(
                   crossAxisAlignment: WrapCrossAlignment.center,
-                  children: [
+                  children: const [
                     Icon(
                       Icons.star,
                       color: Colors.yellow,
