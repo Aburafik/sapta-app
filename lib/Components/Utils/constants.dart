@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:sabta_app/Views/Home/home_view.dart';
+import 'package:sabta_app/Views/Request/request_view.dart';
 
 List<Widget> pages = const [
   HomeVC(),
   Center(child: Text("Orders")),
-  Center(child: Text("Requests")),
+  RequestVC(),
   Center(child: Text("Wallet")),
   Center(child: Text("Profile")),
 ];
