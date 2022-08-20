@@ -13,7 +13,7 @@ AppBar requestComponentAppBar(BuildContext context) {
             .copyWith(color: GREY_COLOR_75, fontSize: 20),
       ),
       bottom: PreferredSize(
-        preferredSize: Size.fromHeight(15),
+        preferredSize: const Size.fromHeight(15),
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Row(
@@ -21,7 +21,7 @@ AppBar requestComponentAppBar(BuildContext context) {
             children: [
               Wrap(
                 children: [
-                  Text("Address:"),
+                  const Text("Address:"),
                   Text(
                     "Kasoa, Nyanyano Street",
                     style: Theme.of(context).textTheme.bodyText1!.copyWith(),
