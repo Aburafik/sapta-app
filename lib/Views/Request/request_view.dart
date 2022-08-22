@@ -4,6 +4,7 @@ import 'package:sabta_app/Components/category_selection.dart';
 import 'package:sabta_app/Components/custom_button.dart';
 import 'package:sabta_app/Components/request_component_app_bar.dart';
 import 'package:sabta_app/Components/select_item.dart';
+import 'package:sabta_app/Views/Request/request_success_screen.dart';
 
 class RequestVC extends StatefulWidget {
   const RequestVC({Key? key}) : super(key: key);
@@ -67,7 +68,13 @@ class _RequestVCState extends State<RequestVC> {
 
                       CustomButtonComponent(
                         buttonText: "Proceed to pick up",
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                      RequestSuccessMessageVC()));
+                        },
                       ),
                     ],
                   ),
