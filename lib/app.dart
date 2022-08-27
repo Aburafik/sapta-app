@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-        scaffoldBackgroundColor: Color(0xffF4F4F4),
+        scaffoldBackgroundColor: const Color(0xffF4F4F4),
         
       ),
       initialRoute: "/",
@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
         "/sign-up-view": (context) => const SignUpVC(),
         "/reset-password-view": (context) => const ForgotPasswordVC(),
         "/notification-view": (context) => const Notifications(),
-        "/home-page": (context) =>HomePage()
+        "/home-page": (context) =>const HomePage()
       },
     );
   }

@@ -4,7 +4,7 @@ import 'package:sabta_app/Components/Utils/color_themes.dart';
 import 'package:sabta_app/Components/custom_button.dart';
 
 class AuthenticationsOptionsComponents extends StatelessWidget {
-  AuthenticationsOptionsComponents({
+  const AuthenticationsOptionsComponents({
     Key? key,
     this.faceBookAuthButtonText,
     this.googleAuthButtonText,
@@ -13,12 +13,12 @@ class AuthenticationsOptionsComponents extends StatelessWidget {
     this.rightWrapperTextOnTap,
   }) : super(key: key);
 
-  String? googleAuthButtonText;
-  String? faceBookAuthButtonText;
+  final String? googleAuthButtonText;
+  final String? faceBookAuthButtonText;
 
-  String? wrapperLeftText;
-  String? wrapperRightText;
-  Function()? rightWrapperTextOnTap;
+  final String? wrapperLeftText;
+  final String? wrapperRightText;
+  final Function()? rightWrapperTextOnTap;
 
   @override
   Widget build(BuildContext context) {
