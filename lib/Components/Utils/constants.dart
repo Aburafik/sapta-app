@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:sabta_app/Views/Home/home_view.dart';
+import 'package:sabta_app/Views/Profile/profile_view.dart';
 import 'package:sabta_app/Views/Request/request_view.dart';
 
 List<Widget> pages = const [
@@ -8,7 +9,7 @@ List<Widget> pages = const [
   Center(child: Text("Orders")),
   RequestVC(),
   Center(child: Text("Wallet")),
-  Center(child: Text("Profile")),
+  ProfileVC()
 ];
 
 final List<Map<String, dynamic>> imgList = [
