@@ -45,7 +45,7 @@ class _RequestCategorySelectionComponentState
             children: [
               Icon(wasteType[index]['image'], color: PRIMARY_COLOR),
               Text(wasteType[index]['name'],
-                  style: TextStyle(color: PRIMARY_COLOR)),
+                  style: const TextStyle(color: PRIMARY_COLOR)),
             ],
           ),
         ),

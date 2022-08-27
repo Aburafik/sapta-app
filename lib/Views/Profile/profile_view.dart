@@ -2,7 +2,9 @@ import 'package:feather_icons/feather_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:sabta_app/Components/Utils/color_themes.dart';
+import 'package:sabta_app/Components/my_accounts_components.dart';
 import 'package:sabta_app/Components/user_profile_component.dart';
+import 'package:sabta_app/Components/support_component.dart';
 
 class ProfileVC extends StatelessWidget {
   const ProfileVC({Key? key}) : super(key: key);
@@ -26,76 +28,51 @@ class ProfileVC extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-          const  UserProfileComponent(),
+            const UserProfileComponent(),
             Text(
               "My Account",
               style:
                   Theme.of(context).textTheme.bodyText1!.copyWith(fontSize: 18),
             ),
             const MyAccountComponent(),
-            const MyAccountComponent(),
+            const SupportComponent(),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(Icons.logout),
+                  SizedBox(width: 10),
+                  Text("SignOut",
+                      style: Theme.of(context)
+                          .textTheme
+                          .headline2!
+                          .copyWith(fontSize: 16))
+                ],
+              ),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                moreText(text: "About Us", context: context),
+                SizedBox(width: 10),
+                moreText(text: "Privacy Policy", context: context),
+                SizedBox(width: 10),
+                moreText(text: "Terms Of Use", context: context),
+              ],
+            )
           ],
         ),
       ),
     );
   }
+
+  Text moreText({String, text, BuildContext? context}) => Text(
+        text!,
+        style: Theme.of(context!).textTheme.headline2!.copyWith(fontSize: 16),
+      );
 }
 
-class MyAccountComponent extends StatelessWidget {
-  const MyAccountComponent({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Card(
-      shape: cardDecorator(),
-      child: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Column(
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Row(
-                  children: const [
-                    Icon(FeatherIcons.bell),
-                    Text("Notifications"),
-                  ],
-                ),
-                Switch(value: true, onChanged: (value) {}),
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Row(
-                  children: const [
-                    Icon(FeatherIcons.mapPin),
-                    Text("Tasks Remainder"),
-                  ],
-                ),
-                Switch(value: true, onChanged: (value) {}),
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Row(
-                  children: const [
-                    Icon(FontAwesomeIcons.addressCard),
-                    Text("Address"),
-                  ],
-                ),
-                Icon(Icons.arrow_circle_right),
-              ],
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
 
 RoundedRectangleBorder cardDecorator() =>
     RoundedRectangleBorder(borderRadius: BorderRadius.circular(10));
