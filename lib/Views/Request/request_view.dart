@@ -33,11 +33,10 @@ class _RequestVCState extends State<RequestVC> {
                         textTitle: "Choose Type",
                         hasIcon: false,
                       ),
-                      RequestCategorySelectionComponent(),
+                      const RequestCategorySelectionComponent(),
                       const SizedBox(
                         height: 10,
                       ),
-                      // PickUpDetailsComponent(),
                       SelectItemTitleComponent(
                         textTitle: "Details",
                         onTap: () {
@@ -73,7 +72,7 @@ class _RequestVCState extends State<RequestVC> {
                               context,
                               MaterialPageRoute(
                                   builder: (context) =>
-                                      RequestSuccessMessageVC()));
+                                      const RequestSuccessMessageVC()));
                         },
                       ),
                     ],
